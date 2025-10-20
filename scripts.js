@@ -644,21 +644,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Form submission
-    if (emailForm) {
-        emailForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('popupName').value;
-            const email = document.getElementById('popupEmail').value;
-            const phone = document.getElementById('popupPhone') ? document.getElementById('popupPhone').value : '';
-            const interest = document.getElementById('popupInterest').value;
-            
-            // Build mailto link
-            const mailto = `mailto:adombonney1@gmail.com?subject=New%20Subscription%20from%20${encodeURIComponent(name)}&body=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0APhone:%20${encodeURIComponent(phone)}%0AInterest:%20${encodeURIComponent(interest)}`;
-            window.location.href = mailto;
-        });
-    }
+   
+    
     
     // Close success message
     if (successBtn) {
@@ -789,3 +776,40 @@ function debugAnalytics() {
 }
 
 // Call this in browser console: debugAnalytics()
+
+// Replace the existing email form submission code with this:
+if (emailForm) {
+    emailForm.addEventListener('submit', function(e) {
+        // Basic validation
+        const name = document.getElementById('popupName').value;
+        const email = document.getElementById('popupEmail').value;
+        const consent = document.getElementById('popupConsent').checked;
+        
+        if (!name || !email || !consent) {
+            e.preventDefault();
+            alert('Please fill in all required fields and agree to receive emails.');
+            return;
+        }
+        
+        // Show loading state
+        const submitBtn = this.querySelector('.popup-btn');
+        const btnText = submitBtn.querySelector('.btn-text');
+        const btnLoading = submitBtn.querySelector('.btn-loading');
+        
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'block';
+        
+        // Set cookie to prevent showing popup again
+        setCookie('emailPopupShown', 'true', 30);
+        
+        // Form will submit to Mailchimp automatically via the action attribute
+        // Success will be handled by the target="_blank" opening in new tab
+        
+        // Close popup after a short delay
+        setTimeout(() => {
+            if (emailPopup) {
+                emailPopup.style.display = 'none';
+            }
+        }, 1000);
+    });
+}
