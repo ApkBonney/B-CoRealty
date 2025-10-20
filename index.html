@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta name="google-site-verification" content="i1Hlrv1agqupQp_gpIMOduGlJJdMYWlESn29d_M8QAY" />
     
 <!-- Google tag (gtag.js) -->
@@ -400,40 +401,45 @@
             <h2>Find Your Dream Home</h2>
             <p>Subscribe to get exclusive property listings, market insights, and early access to new opportunities in Accra's premium real estate market.</p>
             
-            <form id="emailForm" class="email-form">
-                <div class="form-group">
-                    <input type="text" id="popupName" class="form-control" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="popupEmail" class="form-control" placeholder="Your Email Address" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" id="popupPhone" class="form-control" placeholder="Phone Number" required>
-                </div>
-                <div class="form-group">
-                    <select id="popupInterest" class="form-control">
-                        <option value="">What are you interested in?</option>
-                        <option value="buying">Buying a Property</option>
-                        <option value="selling">Selling a Property</option>
-                        <option value="renting">Renting a Property</option>
-                        <option value="investment">Investment Opportunities</option>
-                        <option value="Tour">Schedule Tour</option>
-                        <option value="newsletter">Just the Newsletter</option>
-                    </select>
-                </div>
-                
-                <div class="consent-checkbox">
-                    <input type="checkbox" id="popupConsent" required>
-                    <label for="popupConsent">I agree to receive marketing emails and property updates from B&CoRealty</label>
-                </div>
-                
-                <button type="submit" class="btn popup-btn">
-                    <span class="btn-text">Subscribe Now</span>
-                    <div class="btn-loading" style="display: none;">
-                        <i class="fas fa-spinner fa-spin"></i> Subscribing...
-                    </div>
-                </button>
-            </form>
+            <form action="https://github.us2.list-manage.com/subscribe/post?u=87d00f3c119295447338f0cc3&amp;id=c622a92513&amp;f_id=004876e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate email-form" target="_blank">
+    <div class="form-group">
+        <input type="text" name="FNAME" id="popupName" class="form-control" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+        <input type="email" name="EMAIL" id="popupEmail" class="form-control" placeholder="Your Email Address" required>
+    </div>
+    <div class="form-group">
+        <input type="tel" name="PHONE" id="popupPhone" class="form-control" placeholder="Phone Number">
+    </div>
+    <div class="form-group">
+        <select name="INTEREST" id="popupInterest" class="form-control">
+            <option value="">What are you interested in?</option>
+            <option value="buying">Buying a Property</option>
+            <option value="selling">Selling a Property</option>
+            <option value="renting">Renting a Property</option>
+            <option value="investment">Investment Opportunities</option>
+            <option value="Tour">Schedule Tour</option>
+            <option value="newsletter">Just the Newsletter</option>
+        </select>
+    </div>
+    
+    <!-- Mailchimp anti-bot -->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_87d00f3c119295447338f0cc3_c622a92513" tabindex="-1" value="">
+    </div>
+    
+    <div class="consent-checkbox">
+        <input type="checkbox" id="popupConsent" required>
+        <label for="popupConsent">I agree to receive marketing emails and property updates from B&CoRealty</label>
+    </div>
+    
+    <button type="submit" class="btn popup-btn" name="subscribe">
+        <span class="btn-text">Subscribe Now</span>
+        <div class="btn-loading" style="display: none;">
+            <i class="fas fa-spinner fa-spin"></i> Subscribing...
+        </div>
+    </button>
+</form>
             
             <p class="popup-note">We respect your privacy. Unsubscribe at any time.</p>
         </div>
@@ -495,5 +501,4 @@
     <script src="scripts.js"></script>
 
 </body>
-
 </html>
