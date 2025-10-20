@@ -777,7 +777,7 @@ function debugAnalytics() {
 
 // Call this in browser console: debugAnalytics()
 
-// Replace the existing email form submission code with this:
+// Email form submission code with this:
 if (emailForm) {
     emailForm.addEventListener('submit', function(e) {
         // Basic validation
